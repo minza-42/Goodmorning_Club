@@ -91,6 +91,8 @@ h3 {
     font-size: 1rem;
     letter-spacing: 1px;
 }
+
+/*---------List colors---------*/
 .coffee-list li:nth-child(odd) span:first-child {
     color: $pink;
 }
@@ -103,6 +105,20 @@ h3 {
 .coffee-list li:nth-child(3n) span:first-child {
     color: $yellow;
 }
+/*---------List color for 15KR---------*/
+.coffee-list li:nth-child(odd) span:last-child {
+    color: $pink;
+}
+.coffee-list li:nth-child(3n+1) span:last-child {
+    color: #222;
+}
+.coffee-list li:nth-child(3n+2) span:last-child {
+    color: $pink;
+}
+.coffee-list li:nth-child(3n) span:last-child {
+    color: $yellow;
+}
+
 
 /*---------Menu List Styles---------*/
 .menu-list h2.sips-title {
