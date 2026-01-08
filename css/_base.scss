@@ -7,7 +7,7 @@ $brown: #422B2B;
 /*---------Base Styles---------*/
 body {
     background-color: transparent;
-    padding-top: 110px;
+    padding-top: 150px;
     background-image: url("../img/background.jpg"); 
     background-size: cover;
     background-position: center;
@@ -16,8 +16,8 @@ body {
 }
 header {
     background-color: $blue;
-    font-size: 30px;
-    height: 100px;
+    font-size: 20px;
+    height: 120px;
     padding: 0 2rem;
     display: flex;
     align-items: center;
@@ -28,13 +28,11 @@ header {
     width: 100%;
     z-index: 2000;
 }
-
 header h1 {
   margin-top: 20px;
 }
-
 main {
-  padding: 8px;
+  padding: 40px;
 }
 
 /*---------Title Styles---------*/
@@ -42,7 +40,7 @@ h1 {
     font-family: "Bagel Fat One", system-ui;
     font-weight: 200;
     font-style: normal;
-    font-size: clamp(2.5rem, 10vw, 6rem);
+    font-size: clamp(2.5rem, 8vw, 8rem);
     color: white;
     margin: 0;
     padding: 0;
@@ -52,14 +50,13 @@ h2 {
     font-family: "Oi", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(2rem, 8vw, 5rem);
-    margin-bottom: 0;
+    font-size: clamp(2rem, 8vw, 6rem);
 }
 h3 {
     font-family: "Oi", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.3em;
+    font-size: 2em;
     margin: 1rem 0 0.5rem;
 }
 
@@ -67,17 +64,14 @@ h3 {
 .sips-title {
   color: $blue;
 }
-
 .grub-title {
     color: $brown;
 }
-
 .news-title {
     color: $pink;
-    border-bottom: 3px solid $pink;
+    border-bottom: 4px solid $pink;
     margin-bottom: 20px;
 }
-
 .contact-title {
   color: $yellow;
 }
@@ -88,7 +82,7 @@ h3 {
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1rem;
+    font-size: 1.2rem;
   letter-spacing: 1px;
   padding: 5px;
 }
@@ -96,7 +90,18 @@ h3 {
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1.2rem;
+}
+
+/*---------Grub List Styles---------*/
+.left-grub .border-top-grub .inner ul.coffee-list li h4.menu-dish-title,
+.left-grub .border-top-grub .inner ul.coffee-list li p.menu-dish-desc {
+    color: #000;
+}
+.left-grub .border-top-grub .inner ul.coffee-list li span {
+    color: #000;
+    white-space: nowrap;
+    margin-right: 0.5rem;
 }
 
 /*---------List colors---------*/
@@ -142,11 +147,20 @@ h3 {
 }
 
 /*---------News Section Styles-----*/
-
+.news-title ~ div p.menu-dish-desc {
+    max-width: 500px;
+    text-align: left;
+    margin-left: 0;
+}
 
 /*---------Menu List Styles---------*/
+.left-grub .border-top-grub .inner p.menu-dish-desc {
+    max-width: 250px;
+    text-align: left;
+    margin-left: 0;
+}
 .menu-list h2.sips-title {
-  border-bottom: 3px solid $blue;
+  border-bottom: 4px solid $blue;
 }
 /*---------Menu ul Styles---------*/
 .menu {
@@ -217,12 +231,12 @@ h3 {
 /*---------Overlay Menu Styles---------*/
 .overlay-menu {
     position: fixed;
-    top: 100px;
+    top: 120px;
     left: 0;
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     background: $yellow;
-    z-index: 900;
+    z-index: 1500;
     opacity: 0;
     pointer-events: none;
     display: flex;
@@ -284,7 +298,7 @@ $form-blue: #8EA8DB;
     display: flex;
     align-items: center;
     color: $yellow;
-    border-bottom: 3px solid $yellow;
+    border-bottom: 4px solid $yellow;
     padding-bottom: 10px;
     margin-bottom: 40px;
     img {
@@ -461,10 +475,12 @@ $form-blue: #8EA8DB;
 
 /*---------Coffee Cup img Styles---------*/
 .coffee-cup img {
-  display: block;
-  margin-inline: auto;
-  position: relative;
-  top: -15px;
+    display: block;
+    margin-inline: auto;
+    position: relative;
+    top: -15px;
+    width: 90px;
+    height: auto;
 }
 .svg-vcenter--footer {
   display: flex;
@@ -506,4 +522,16 @@ footer {
   font-size: 1.7em;
   font-weight: 300;
   font-family: Arial, sans-serif;
-} 
+}
+@media (max-width: 700px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 0.5rem;
+  }
+  .footer-center, .footer-right {
+    text-align: center;
+    width: 100%;
+  }
+}

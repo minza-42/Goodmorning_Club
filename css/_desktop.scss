@@ -11,10 +11,10 @@
     grid-template-columns: repeat(2, 1fr);
 
     .left-sips {
-      border-right: 3px solid $blue;
+      border-right: 4px solid $blue;
     }
     .left-grub{
-      border-right: 3px solid $brown;
+      border-right: 4px solid $brown;
     }
 
     ul li {
@@ -31,10 +31,10 @@
     }
 
     .border-top {
-      border-top: 3px solid $blue;
+      border-top: 4px solid $blue;
     }
     .border-top-grub {
-      border-top: 3px solid $brown;
+      border-top: 4px  solid $brown;
     }
     
   }
