@@ -29,6 +29,10 @@ header {
     z-index: 2000;
 }
 
+header h1 {
+  margin-top: 20px;
+}
+
 main {
   padding: 8px;
 }
@@ -51,7 +55,15 @@ h2 {
     font-size: clamp(2rem, 8vw, 5rem);
     margin-bottom: 0;
 }
+h3 {
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    margin: 1rem 0 0.5rem;
+}
 
+/*---------Section Title Colors---------*/
 .sips-title {
   color: $blue;
 }
@@ -61,20 +73,15 @@ h2 {
 }
 
 .news-title {
-  color: $pink;
+    color: $pink;
+    border-bottom: 3px solid $pink;
+    margin-bottom: 20px;
 }
 
 .contact-title {
   color: $yellow;
 }
 
-h3 {
-    font-family: "Oi", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.3em;
-    margin: 1rem 0 0.5rem;
-}
 
 /*---------Coffee List Styles---------*/
 .coffee-list span:first-child {
@@ -83,13 +90,13 @@ h3 {
   font-style: normal;
   font-size: 1rem;
   letter-spacing: 1px;
+  padding: 5px;
 }
 .coffee-list span:last-child {
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    letter-spacing: 1px;
 }
 
 /*---------List colors---------*/
@@ -119,12 +126,29 @@ h3 {
     color: $yellow;
 }
 
+/*---------Grub  Dish Styles---------*/
+.menu-dish-title {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menu-dish-desc {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+/*---------News Section Styles-----*/
+
 
 /*---------Menu List Styles---------*/
 .menu-list h2.sips-title {
   border-bottom: 3px solid $blue;
 }
-
+/*---------Menu ul Styles---------*/
 .menu {
   ul {
     padding: 0 ;
@@ -132,8 +156,6 @@ h3 {
     list-style: none;
   }
 }
-
-
 
 /*---------Menu----------*/
 .menu-icon {
@@ -195,10 +217,10 @@ h3 {
 /*---------Overlay Menu Styles---------*/
 .overlay-menu {
     position: fixed;
-    top: 105px;
+    top: 100px;
     left: 0;
     width: 100vw;
-    height: calc(100vh - 105px);
+    height: calc(100vh - 100px);
     background: $yellow;
     z-index: 900;
     opacity: 0;
@@ -335,13 +357,14 @@ $form-blue: #8EA8DB;
     background-color: $blue;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 12px;
     font-family: "Arial", sans-serif;
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     align-self: flex-end; /* Align button to the right */
+    transition: background 0.2s, color 0.2s;
     &:hover {
         background-color: $yellow;
         color: $brown;
@@ -380,6 +403,10 @@ $form-blue: #8EA8DB;
         margin-right: 15px;
         display: inline-block;
         position: relative;
+        @media (min-width: 769px) {
+            width: 18px;
+            height: 18px;
+        }
     }
 
     /*---------Shows a checkmark when the radio button is selected---------*/
@@ -419,6 +446,10 @@ $form-blue: #8EA8DB;
     height: 1.3em;
     margin-right: 0.5em;
     vertical-align: middle;
+    @media (min-width: 769px) {
+        width: 1em;
+        height: 1em;
+    }
 }
 .radio-group label {
     font-size: 1.1em;
@@ -448,6 +479,7 @@ $form-blue: #8EA8DB;
   left: 5%;
   height: 80px;
 }
+
 /*---------Footer Styles---------*/
 footer {
     font-family: "Fira Code", monospace;
