@@ -1,0 +1,461 @@
+/*---------Color Variables---------*/
+$blue: #2B6EDA;
+$pink: #F79EB0;
+$yellow: #FFB205;
+$brown: #422B2B;
+
+/*---------Base Styles---------*/
+body {
+    background-color: transparent;
+    padding-top: 110px;
+    background-image: url("../img/background.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+header {
+    background-color: $blue;
+    font-size: 30px;
+    height: 100px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+main {
+  padding: 8px;
+}
+
+/*---------Title Styles---------*/
+h1 {
+    font-family: "Bagel Fat One", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    font-size: clamp(2.5rem, 10vw, 6rem);
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+}
+h2 {
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(2rem, 8vw, 5rem);
+    margin-bottom: 0;
+}
+
+.sips-title {
+  color: $blue;
+}
+
+.grub-title {
+    color: $brown;
+}
+
+.news-title {
+  color: $pink;
+}
+
+.contact-title {
+  color: $yellow;
+}
+
+h3 {
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    margin: 1rem 0 0.5rem;
+}
+
+/*---------Coffee List Styles---------*/
+.coffee-list span:first-child {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.coffee-list span:last-child {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.coffee-list li:nth-child(odd) span:first-child {
+    color: $pink;
+}
+.coffee-list li:nth-child(3n+1) span:first-child {
+    color: #222;
+}
+.coffee-list li:nth-child(3n+2) span:first-child {
+    color: $pink;
+}
+.coffee-list li:nth-child(3n) span:first-child {
+    color: $yellow;
+}
+
+/*---------Menu List Styles---------*/
+.menu-list h2.sips-title {
+  border-bottom: 3px solid $blue;
+}
+
+.menu {
+  ul {
+    padding: 0 ;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+
+
+/*---------Menu----------*/
+.menu-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3000;
+    padding: 0;
+    transition: 0.3s;
+    align-self: center;
+}
+    
+.menu-icon-bar {
+        display: block;
+        width: 45px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: 0.4s;
+        flex-shrink: 0;
+}
+/*---------Menu X Styles---------*/
+.menu-x {
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    pointer-events: none;
+    user-select: none;
+
+    .menu-x-bar {
+        position: absolute;
+        width: 36px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        left: 6px;
+        top: 22px;
+    }
+    .menu-x-bar1 {
+        transform: rotate(45deg);
+    }
+    .menu-x-bar2 {
+        transform: rotate(-45deg);
+    }
+}
+/*---------Overlay Menu Styles---------*/
+.overlay-menu {
+    position: fixed;
+    top: 105px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 105px);
+    background: $yellow;
+    z-index: 900;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+.overlay-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+.overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.overlay-menu li {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay-menu a {
+    color: #422B2B;
+    font-size: clamp(2rem, 10vw, 4rem);
+    text-decoration: none;
+    font-family: "Bagel Fat One", system-ui;
+    letter-spacing: 2px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.overlay-menu a:hover {
+    color: #ffd700;
+}
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/*---------Contact Form Styles---------*/
+$form-blue: #8EA8DB;
+
+.contact-title {
+    display: flex;
+    align-items: center;
+    color: $yellow;
+    border-bottom: 3px solid $yellow;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    img {
+        height: 0.8em;
+        width: auto;
+        position: relative;
+        bottom: -30px;
+        flex-shrink: 0;
+    }
+    .contact-heart {
+        height: 1.2em;
+        margin-left: 10px;
+        transform: translateY(10px);
+    }
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*---------Contact Form Logic ---------*/
+.form-group {
+    position: relative;
+    margin-top: 1.2rem; 
+    margin-bottom: 1.5rem;
+
+    input, textarea {
+        width: 100%;
+        padding: 12px 15px; 
+        border: 2px solid $blue; 
+        border-radius: 15px;
+        background-color: $form-blue;
+        font-family: "Fira Code", monospace;
+        font-size: 1rem;
+        color: #000000;
+        outline: none;
+        display: block;
+
+        
+        &:focus + label,
+        &:not(:placeholder-shown) + label {
+            transform: translateY(-40px); 
+            font-size: 0.8rem; 
+            color: $blue;      
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 15px;
+        top: 12px; 
+        font-family: "Fira Code", monospace;
+        font-size: 1rem;
+        color: $blue;
+        pointer-events: none; 
+        transition: all 0.3s ease-in-out; 
+    }
+}
+
+/*---------Button Styling---------*/
+.send-btn {
+    background-color: $blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-family: "Arial", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    align-self: flex-end; /* Align button to the right */
+    &:hover {
+        background-color: $yellow;
+        color: $brown;
+    }
+}
+@media (max-width: 768px) {
+    .send-btn {
+        width: 100%;   /* Button takes full width on mobile */
+        align-self: stretch;
+    }
+}
+
+/*---------Custom Radio Buttons Styling--------- */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Fira Code", monospace;
+    font-size: 1.1rem;
+    color: #000;
+
+    input { display: none; }
+
+    .custom-radio {
+        width: 26px;
+        height: 26px;
+        background-color: $form-blue;
+        border-radius: 50%;
+        margin-right: 15px;
+        display: inline-block;
+        position: relative;
+    }
+
+    /*---------Shows a checkmark when the radio button is selected---------*/
+    input:checked + .custom-radio::after {
+        content: '✓';
+        position: absolute;
+        top: -4px;
+        left: 3px;
+        font-size: 22px;
+        color: #000;
+    }
+}
+
+.extra-input-group {
+    .small-input {
+        background-color: $form-blue;
+        border-radius: 20px;
+        padding: 20px 15px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+}
+/*---------Radio buttons styling--------*/
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    margin-top: 0.5em;
+}
+.radio-group input[type="radio"] {
+    accent-color: $blue;
+    width: 1.3em;
+    height: 1.3em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+.radio-group label {
+    font-size: 1.1em;
+    color: #222;
+    font-family: "Fira Code", monospace;
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+/*---------Coffee Cup img Styles---------*/
+.coffee-cup img {
+  display: block;
+  margin-inline: auto;
+  position: relative;
+  top: -15px;
+}
+.svg-vcenter--footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2em;
+}
+.decorative-line {
+  display: block;
+  margin: 2em auto;
+  position: relative;
+  left: 5%;
+  height: 80px;
+}
+/*---------Footer Styles---------*/
+footer {
+    font-family: "Fira Code", monospace;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    border-top: 4px solid $blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.footer-center {
+  text-align: center;
+  line-height: 2.0; 
+}
+.footer-right {
+  text-align: right;
+} 
+.footer-arrow {
+  font-size: 1.7em;
+  font-weight: 300;
+  font-family: Arial, sans-serif;
+} 
