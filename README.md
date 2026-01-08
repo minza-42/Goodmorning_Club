@@ -38,21 +38,27 @@ Responsiveness is achieved using:
 - Use of rem and percentage units for flexible sizing
 - The menu transforms into an overlay on mobile and is optimized for touch
 
-The site has been tested on both desktop and mobile to ensure it works and looks good on all devices.
+> **Note:** Responsive design is very challenging for this project. It does not look great on mobile or iPad yet, but this is a work in progress.
 
-![Responsiv layout](image-4.png)
+## Lighthouse Report (Jan 2026)
 
-## Lighthouse Results
+After optimizing images, CSS, and JavaScript, the site achieved the following Lighthouse results:
 
-The project has been tested with Google Lighthouse to ensure:
+| Category       | Score |
+| -------------- | ----- |
+| Performance    | 92    |
+| Accessibility  | 94    |
+| Best Practices | 96    |
+| SEO            | 91    |
 
-- High performance
-- Accessibility
-- Best practices
-- SEO
+**Performance Metrics:**
 
-The results show high scores in all categories. See below for an example Lighthouse score:
+- First Contentful Paint: 0.7s
+- Largest Contentful Paint: 1.5s
+- Total Blocking Time: 0ms
+- Speed Index: 0.7s
+- Cumulative Layout Shift: 0.118
 
-![Lighthouse score](lighthouse.png)
+![Lighthouse report](image-4.png)
 
 ---
